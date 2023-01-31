@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question One</title>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+        }
+        td{
+            padding: 0.25rem;
+        }
+     
+        #box {
+            padding: 1rem;
+            transform: translateX(80vw);
+            transition: 2s;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#box").css("transform", "translateX(0vw)");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div id="box">
+            <table>
+                <tr>
+                    <td bgcolor="green">One</td>
+                    <td bgcolor="green">Two</td>
+                    <td bgcolor="green">Three</td>
+                </tr>
+                <tr>
+                    <td bgcolor="orange">Four</td>
+                    <td bgcolor="orange">Five</td>
+                    <td bgcolor="orange">Six</td>
+                </tr>
+                <tr>
+                    <td bgcolor="green">Seven</td>
+                    <td bgcolor="green">Eight</td>
+                    <td bgcolor="green">Nine</td>
+                </tr>
+            </table>
+            <br />
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg" alt="college image" width="200" height="200">
+        </div>
+        <button type="button">Move</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Q2</title>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+        }
+        td{
+            padding: 0.25rem;
+        }
+        td:hover{
+            cursor: pointer;
+        }
+        #box {
+            padding: 1rem;
+            transform: translateX(0);
+            transition: 2s;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function () {
+          
+            $("td").click(function (e) {
+                var ans=   $("#ans").html()
+                var val = $(this).html()
+                $("#ans").html(ans+ val)
+            })
+
+            $("#equal").click(function (e) {
+                var ans=   $("#ans").html()
+                var val = eval(ans)
+                $("#ans").html(val)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div id="box">
+            <div id="ans"></div>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>+</td>
+
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>-</td>
+
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>*</td>
+                </tr>
+                <tr>
+                    <td colspan="3">0</td>
+                    <td>/</td>
+                </tr>
+            </table>
+            <button id="equal">=</button>
+            <br />
+        </div>
+    </div>
+
+</body>
+</html>

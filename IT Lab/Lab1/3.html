@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Q3</title>
+    <style>
+            #card{
+                width: 500px;
+                height: 800px;
+                text-align: center;
+                background-color: aliceblue;
+            }
+        button{
+            margin-top: 1rem;
+        }
+        img{
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function () {
+          
+            $("#update").click(function (e) {
+                var color=   $("#c").val()
+                var font=   $("#f").val()
+                var s=   $("#size").val()
+                var g=   $("#greeting").val()
+
+
+                $("#card").css("background-color", color)
+                $("#card").css("font-family", font)
+                $("#card").css("font-size", s+"px")
+                $("#heading").html(g)
+              var check= $("#default").prop('checked')
+              if(check){
+                $("img").css("display","block")
+
+              }
+              else{
+                $("img").css("display","none")
+
+              }
+
+              var selected = $("input[type='radio'][name='border']:checked").val();
+              $("#card").css("border-style", selected)
+
+
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div>
+       <div>
+        <p>Change background color</p>
+        <select id="c">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+
+        </select>
+        <p>
+            Choose a font
+        </p>
+        <select id="f">
+            <option value="Georgia">Georgia</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        <p>
+            Enter font size
+        </p>
+        <input type="number" id="size"/>
+        <p>Choose a border style</p>
+        <input type="radio" id="none" name="border" value="none">
+        <label for="none">none</label><br>
+        <input type="radio" id="double" name="border" value="double">
+        <label for="double">double</label><br>
+        <input type="radio" iHTML="single" name="border" value="solid">
+        <label for="single">single</label> <br/>
+
+        <input type="checkbox" id="default"> Add Default image
+        block
+        <p>
+            Enter Greeting Text Below
+        </p>
+        <input id="greeting"/>
+        <button id="update">Update</button>
+       </div>
+       <div id="card">
+
+<div id="heading"></div>
+<img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg"  alt="college image" width="200" height="200">
+
+       </div>
+    </div>
+
+</body>
+</html>
