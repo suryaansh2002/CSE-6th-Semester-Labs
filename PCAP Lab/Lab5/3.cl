@@ -5,6 +5,5 @@ __kernel void vector_add(__global int *A){
         int temp=A[i];
         A[i]=A[i+1];
         A[i+1]=temp;
-    printf("\n%d, %d\n",A[i], A[i+1]);
     }
 }
