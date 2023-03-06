@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function (e) {
+                    e.preventDefault();
+                    let doj = $("#date").val()
+                    let diff = new Date() - new Date(doj)
+                    let diff_y=diff/(1000*3600*24*365)
+                    if(diff_y>=5){
+                        alert("Yes you are elgible for promotion")
+                    }
+                    else{
+                        alert("No you are not elgible for promotion")
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h2>Go To:</h2>
+        <div>
+            <a href="./q1">
+                Question 1
+            </a>
+        </div>
+        <div>
+            <a href="./q2">
+                Question 2
+            </a>
+        </div>
+        <div>
+            <a href="./q3">
+                Question 3
+            </a>
+        </div>
+        <div>
+            <a href="./q4">
+                Question 4
+            </a>
+        </div>
+        <h1>Q2</h1>
+        <div class="container">
+
+        <h2>Employee Data Form</h2>
+        <div class="form-group">
+            <label for="blood-group">Employee Id</label>
+            <select class="form-control" id="e-id">
+              <option>10001</option>
+              <option>10002</option>
+              <option>10003</option>
+              <option>10004</option>
+              <option>10005</option>
+              <option>10006</option>
+
+            </select>
+            <div class="form-group">
+                <label for="name">Date of Joining</label>
+                <input required type="date" class="form-control form-control-lg" id="date" placeholder="Enter date of joining"/>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="sub">Am I elegible for Promotions?</button>
+                </div>
+
+        </div>
+
+    </body>
+</html>
