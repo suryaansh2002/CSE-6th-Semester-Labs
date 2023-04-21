@@ -106,15 +106,7 @@ int main()
     for (int i = 0; i < width; i++)
     {
         for (int j = 0; j < width; j++)
-        {
-   
-// Write a program in CUDA to multiply two Matrices for the following specifications:  
-	 
-// 	a. Each row of resultant matrix to be computed by one thread.  
-	 
-// 	b. Each column of resultant matrix to be computed by one thread.  
-	 
-// 	c. Each element of resultant matrix to be computed by one thread. 
+        {. 
          scanf("%d", &B[i * width + j]);
         }
     }
