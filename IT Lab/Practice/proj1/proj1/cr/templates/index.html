@@ -1,0 +1,17 @@
+<h1>Index File</h1>
+<form action="" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Add Name</button>
+</form>
+
+<div>
+  {% for user in users %}
+  <div>{{ user.name }} : {{user.count}}</div>
+  {% endfor %}
+</div>
+
+<div>
+  <form method="post" action="inc/">
+    {% csrf_token %} {{form2.as_p}} <button>Increase</button>
+  </form>
+</div>
