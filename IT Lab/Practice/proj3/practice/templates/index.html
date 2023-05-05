@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <h2>Index page</h2>
+    <div>
+      <form method="post" action="">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      {% for user in users %}
+      <div>
+        Name: {{ user.name }}, DOB: {{ user.dob }}, Address: {{ user.address }}
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
