@@ -1,0 +1,27 @@
+<html>
+  <head></head>
+  <body>
+    <h2>Home page</h2>
+    <div>
+      <form method="post" action="">
+        {% csrf_token %} {{ form.as_p }}
+
+        <button type="submit">Register Student</button>
+      </form>
+    </div>
+    <div>
+      <h2>Student Details</h2>
+      {% for student in students %}
+      <div>
+        {{ student.name }}<br />
+        {{ student.reg_num }}<br />
+        {{ student.branch }}<br />
+        {{ student.cgpa }}
+        <br />
+        <br />
+        <br />
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
