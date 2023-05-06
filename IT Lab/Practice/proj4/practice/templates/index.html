@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Lab Endsem</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        flex-direction: column;
+      }
+      input {
+        display: block;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 150%;
+        margin-left: -25%;
+      }
+      button {
+        width: 150%;
+        margin-left: -25%;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: none;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Home Page</h2>
+    <form action="" method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Add Employee</button>
+    </form>
+    <h2>Employees Data</h2>
+    {% for emp in employees %}
+    <div>{{ emp.name }}, {{emp.email}}, {{emp.years_of_experience}} YOE</div>
+    {% endfor %}
+  </body>
+</html>
